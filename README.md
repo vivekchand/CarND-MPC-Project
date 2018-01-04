@@ -27,6 +27,11 @@ The waypoints are preprocessed by transforming them to the vehicle's perspective
 
 The approach to dealing with latency was twofold (not counting simply limiting the speed): the original kinematic equations depend upon the actuations from the previous timestep, but with a delay of 100ms (which happens to be the timestep interval) the actuations are applied another timestep later, so the equations have been altered to account for this (MPC.cpp lines 104-107). Also, in addition to the cost functions suggested in the lessons (punishing CTE, epsi, difference between velocity and a reference velocity, delta, acceleration, change in delta, and change in acceleration) an additional cost penalizing the combination of velocity and delta (MPC.cpp line 63) was included and results in much more controlled cornering.
 
+
+### Video
+
+[![](https://img.youtube.com/vi/5kxS8NY4Hq4/0.jpg)](https://www.youtube.com/watch?v=5kxS8NY4Hq4)
+
 ---
 
 ## Dependencies
